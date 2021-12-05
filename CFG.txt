@@ -1,0 +1,12 @@
+
+Terminals { int,char,float,double,ID,[0-9],;,(,),{,},, }
+Start = { program }
+
+program -> declarations function
+declarations -> type variables;
+variables -> ID | ID , variables
+function -> type ID ( argumentlist ){ statements }
+argumentlist -> variables
+statements -> expressions;
+expressions -> ID = expressions | ID | [0-9]
+type -> int | char | float | double
